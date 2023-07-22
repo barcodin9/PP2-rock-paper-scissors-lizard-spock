@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.head-bar {
+    width: 100vw;
+    height: 100px;
+    background: #6B705C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    color: white;
+    font-size: 60px;
+    font-family: "Permanent Marker", "Helvetica Neue";
+    
+
+}
+
+
