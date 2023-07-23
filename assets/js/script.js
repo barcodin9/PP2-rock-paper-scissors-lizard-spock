@@ -4,6 +4,8 @@ userResult = document.querySelector('.user-result img');
 cpuResult = document.querySelector('.cpu-result img');
 result = document.querySelector('.result');
 optionalImages = document.querySelectorAll('.image-option');
+let winsCount = 0;
+let lossesCount = 0;
 
 
 //selecting image for your next move
@@ -20,7 +22,10 @@ optionalImages.forEach((image, index) => {
     })
 })
 
-
+function resetResultImages() {
+    userResult.src = "assets/images/hand-rock_1.png";
+    cpuResult.src = "assets/images/hand-rock_1.png";
+  }
 
 // move selected is the move played on the user side
 function playMove(userMove) {
@@ -29,6 +34,7 @@ function playMove(userMove) {
 
     userResult.classList.add("shake-animation");
     cpuResult.classList.add("shake-animation");
+    
 
 
 // set delay between move selection and game judgement - animation inc.
@@ -53,16 +59,26 @@ setTimeout(() => {
         (userMove === "spock" && computerMove === "rock") 
         ) {
             resultMessage = "You win!"
+            winsCount++;
         } else {
             resultMessage = "Computer wins!"
+            lossesCount++;
         }
+
+        document.getElementById("wins").textContent = winsCount;
+        document.getElementById("losses").textContent = lossesCount;
         
 
         resultContainer.textContent = resultMessage
         setTimeout(() => {
             userResult.classList.remove("shake-animation");
             cpuResult.classList.remove("shake-animation");
+            resetResultImages();
           }, 1000); // 500ms is the duration of the shake animation
         }, 2500); 
+
+    
     }
+
+    
 

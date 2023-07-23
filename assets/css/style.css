@@ -13,13 +13,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fffafb;
+    background-color: lightslategray;
 }
 
 .head-bar {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: absolute;
     top: 0;
     width: 100%;
@@ -32,6 +32,7 @@ body {
     color: white;
     font-size: 60px;
     margin-left: 30px;
+    text-decoration: none;
 }
 
 
@@ -106,11 +107,27 @@ body {
     animation: shake 1s ease-in-out 3;
   }
 
+  .score-wrap {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    bottom: 115px;
+    font-size: 50px;
+  }
+
+  .score {
+    padding: 30px;
+  }
+
+  .score-number {
+    color: red;
+  }
+
 
 .footer {
     height: 100px;
     width: 100%;
-    background-color: #6B705C;
+    background-color: #131515;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -127,8 +144,12 @@ body {
 }
 
 .icons :hover {
-    color: black;
+    color: slategray;
 }
+
+
+/* rules page */
+
 
 
 
