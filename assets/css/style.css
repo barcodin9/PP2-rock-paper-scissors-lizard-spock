@@ -13,15 +13,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: grey;
+    background-color: #fffafb;
 }
 
 .head-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;
     width: 100%;
     height: 100px;
-    background: #6B705C;
+    background: #131515;
     padding: 10px;
 }
 
@@ -73,6 +76,14 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 10px;
+    opacity: 0.3;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.image-option:hover {
+    opacity: 1;
+    color: black;
 }
 
 .image-option img {
