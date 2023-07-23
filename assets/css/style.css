@@ -81,6 +81,11 @@ body {
     cursor: pointer;
 }
 
+.image-option.active {
+    opacity: 1;
+    color: black;
+}
+
 .image-option:hover {
     opacity: 1;
     color: black;
