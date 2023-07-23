@@ -27,6 +27,12 @@ function playMove(userMove) {
     const moves = ["rock", "paper", "scissors", "lizard", "spock"];
     const computerMove = moves[Math.floor(Math.random() * moves.length)];
 
+    userResult.classList.add("shake-animation");
+    cpuResult.classList.add("shake-animation");
+
+
+// set delay between move selection and game judgement - animation inc.
+setTimeout(() => {
     userResult.src = `assets/images/hand-${userMove}_1.png`;
     cpuResult.src = `assets/images/hand-${computerMove}_1.png`;
 
@@ -50,7 +56,13 @@ function playMove(userMove) {
         } else {
             resultMessage = "Computer wins!"
         }
+        
 
         resultContainer.textContent = resultMessage
-}
+        setTimeout(() => {
+            userResult.classList.remove("shake-animation");
+            cpuResult.classList.remove("shake-animation");
+          }, 1000); // 500ms is the duration of the shake animation
+        }, 2500); 
+    }
 

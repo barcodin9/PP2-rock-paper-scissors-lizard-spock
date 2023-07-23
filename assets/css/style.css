@@ -96,6 +96,15 @@ body {
     height: auto; 
 }
 
+@keyframes shake {
+    0%, 100% { transform: rotate(0); }
+    25%, 75% { transform: rotate(-30deg); }
+    50% { transform: rotate(30deg); }
+  }
+  
+  .shake-animation {
+    animation: shake 1s ease-in-out 3;
+  }
 
 
 .footer {
