@@ -6,11 +6,12 @@ result = document.querySelector('.result');
 optionalImages = document.querySelectorAll('.image-option');
 let winsCount = 0;
 let lossesCount = 0;
+const nameElement = document.getElementsByClassName('.name');
 
 
 //selecting image for your next move
 optionalImages.forEach((image, index) => {
-    image.addEventListener("click", (e) => {
+    image.addEventListener("click", () => {
         image.classList.add("active");
 
         //loop through each image option again
@@ -80,5 +81,8 @@ setTimeout(() => {
     
     }
 
+function changeNameContent() {
+    
+}
     
 
