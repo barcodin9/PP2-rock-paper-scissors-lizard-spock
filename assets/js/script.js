@@ -6,7 +6,19 @@ result = document.querySelector('.result');
 optionalImages = document.querySelectorAll('.image-option');
 let winsCount = 0;
 let lossesCount = 0;
-const nameElement = document.getElementsByClassName('.name');
+const nameElement = document.getElementById('name');
+
+function changeNameContent() {
+    const windowWidth = window.innerWidth;
+    if (windowWidth < 1335) {
+        nameElement.textContent = 'RSPLS!';
+    } else {
+        nameElement.textContent = 'Rock, Paper, Scissors, Lizard, Spock!'
+    }
+}
+
+window.addEventListener('load', changeNameContent);
+window.addEventListener('resize', changeNameContent);
 
 
 //selecting image for your next move
@@ -81,8 +93,6 @@ setTimeout(() => {
     
     }
 
-function changeNameContent() {
-    
-}
+
     
 
