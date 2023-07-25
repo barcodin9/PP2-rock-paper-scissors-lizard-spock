@@ -104,9 +104,9 @@ body {
 }
 
 @keyframes shake {
-    0%, 100% { transform: rotate(0); }
-    25%, 75% { transform: rotate(-30deg); }
-    50% { transform: rotate(30deg); }
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+    
   }
   
   .shake-animation {
@@ -192,6 +192,108 @@ body {
 
 
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+        background-color: #fff; 
+        border-radius: 30px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .result-area {
+        display: flex;
+        justify-content: center;
+        column-gap: 2rem;
+    }
+
+    .result-area img {
+        width: 120px;
+        padding: 0;
+       }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .image-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        opacity: 0.3;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .image-option img {
+        width: 50px; 
+        padding: 10px;
+        height: auto; 
+    }
+    .image-option p {
+        font-size: 10px;
+    }
+
+    .head-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        background: #131515;
+        padding: 10px;
+    }
+    
+    .rules-head-bar {
+        font-size: 30px;
+        color: white;
+        margin-right: 20px;
+    }
+    
+    .name {
+        color: white;
+        font-size: 40px;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+
+    .score-wrap {
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        bottom: 90px;
+        font-size: 20px;
+      }
+    
+      .score {
+        padding: 10px;
+      }
+
+      .result-container {
+        text-align: center;
+        padding: 30px;
+        font-size: 20px;
+    }
+
+    /* rules page */
+
+    .rules-heading {
+        font-size: 100px;
+        padding: 10px;
+        padding-top: 40px;
+    }
+    
+      
+
+}
+   
+
 
 
 
