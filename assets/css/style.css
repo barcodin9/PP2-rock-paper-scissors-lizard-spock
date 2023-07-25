@@ -177,7 +177,23 @@ body {
 
 @media screen and (max-width: 768px) {
     
+.result-container {
+    text-align: center;
+    padding: 10px;
+    font-size:20px;
 }
+
+.container {
+    padding: 0rem 3rem;
+    background-color: #fff; 
+    border-radius: 30px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+}
+
+
 
 
 
